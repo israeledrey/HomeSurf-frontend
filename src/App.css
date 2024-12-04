@@ -1,0 +1,495 @@
+
+/* NavBar.css */
+
+.navBar {
+  position: relative;
+  background-color: #333;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navBar-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navBar a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.1em;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navBar a.active {
+  background-color: #555;
+  color: #ffeb3b; /* Change color for active link */
+}
+
+.navBar a:hover {
+  background-color: #444;
+  color: #ffeb3b; /* Change color on hover */
+}
+
+
+/* Header.css */
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* גובה מלא של חלון הצפייה */
+  background-image: url('https://example.com/your-background-image.jpg'); /* שים כאן את הקישור לתמונה שלך */
+  background-size: cover; /* מתאים את התמונה לגודל של התיבה */
+  background-position: center; /* מרכז את התמונה */
+  color: #197d7f; /* צבע טקסט לבן */
+  text-align: center; /* מרכז את הטקסט */
+  padding: 20px;
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5); /* צל פנימי להבלטה */
+}
+
+.header-container h1 {
+  font-size: 6em;
+  margin: 0;
+  padding: 10px;
+}
+
+.header-container h2 {
+  font-size: 2.5em;
+  margin: 0;
+  padding: 10px;
+  font-weight: 300;
+}
+
+/* Main.css */
+
+main {
+  padding: 20px;
+  background-color: #f0f0f0; /* צבע רקע קליל עבור כל התוכן */
+}
+
+.main-container1 {
+  display: flex;
+  justify-content: space-between; /* שווה מרחקים בין הקטגוריות */
+  flex-wrap: wrap; /* מתיר לשורות להתקפל כשיש יותר מדי תוכן */
+  gap: 20px; /* רווחים בין אלמנטים */
+  padding: 20px;
+}
+
+.main-container1 > div {
+  flex: 1 1 30%; /* כל div יתפוס לפחות 30% מהאורך */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* מרכז את התוכן בתוך כל div */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* צל קל להבלטה */
+  overflow: hidden; /* חותך תוכן החורג מהמיכל */
+  transition: transform 0.3s ease; /* אפקט מעבר בזמן ריחוף */
+  padding: 10px;
+}
+
+.main-container1 > div:hover {
+  transform: scale(1.03); /* הגדלה קלה בריחוף */
+}
+
+.main-container1 img {
+  width: 100%; /* התמונה תתפוס את כל רוחב ה-div */
+  height: 200px; /* גובה קבוע לתמונה */
+  object-fit: cover; /* שומר על יחס התמונה וחותך לפי הצורך */
+  border-bottom: 1px solid #ddd; /* קו תחתון בין התמונה לכותרת */
+}
+
+.main-container1 h1 {
+  margin: 15px 0;
+  font-size: 1.5em; /* גודל הכותרת */
+  color: #333; /* צבע הכותרת */
+  text-align: center; /* מרכז את הכותרת */
+}
+
+
+
+/* Shoping.css */
+
+.shoping-container {
+  text-align: center;
+}
+
+.shoping {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  justify-content: center;
+}
+
+.search-button {
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.search-input{
+  width: 40%;
+  padding: 12px;
+  margin-bottom: 15px;
+  margin-top: 30px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05); /* צל פנימי */
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+}
+
+.search-button i {
+  color: #333; 
+  left: 10px;
+}
+.search-button:hover i {
+  color: #ffeb3b; 
+}
+
+
+/* Board-params.css */
+
+.board-params {
+  width: 15%;
+  height: inherit;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* מוסיף מעבר חלק */
+}
+
+.board-params:hover {
+  transform: scale(1.05); /* מגדיל את האלמנט ב-5% */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* מגביר את הצל */
+}
+
+.board-params img {
+  width: 100%; /* מבטיח שהתמונה תתפוס את רוחב ה-div */
+  height: 55%; /* שומר על יחס הגובה והרוחב של התמונה */
+  border-bottom: 1px solid #ddd; /* קו תחתון מתחת לתמונה */
+  border-radius: 8px 8px 0 0; /* עיגול פינות עליון רק לתמונה */
+}
+
+.board-params h1 {
+  font-size: 2em; /* גודל כותרת */
+  margin: 20px 0; /* רווחים סביב הכותרת */
+  color: #333;
+}
+
+.board-params p {
+  font-size: 1.1em; /* גודל הטקסט */
+  margin: 10px 0; /* רווחים סביב הפסקאות */
+  color: #666;
+}
+
+.board-params button {
+  border: none;
+  border-radius: 3px;
+  background-color: #bebaba;
+  color: #fff;
+  width: 60%;
+  height: 5%;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.board-params button:hover{
+  background-color: #5c5a5a;
+  color: #ffeb3b;
+}
+
+
+/* ordets-container.css */
+.orders-container{
+  position: relative;
+  background-color: #f9f9f9;
+  padding-bottom: 80px; 
+}
+
+.orders-container h1{
+  font-size: 3em;
+  text-align: center;
+  padding: 50px;
+  color: #197d7f;
+}
+
+.payment-button {
+  position: absolute;
+  bottom: 20px; 
+  left: 50%;
+  transform: translateX(-50%); /* מרכז את הכפתור לרוחב ה-div */
+  width: 100px;
+  height: 30px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #197d7f; /* צבע רקע לכפתור */
+  color: white;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.payment-button:hover {
+  background-color: #145e61; /* צבע רקע בריחוף */
+  color: #ffeb3b; /* שינוי צבע טקסט בריחוף */
+}
+
+
+.orders-list{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+
+
+.order-item {
+  position: relative;
+  display: flex;
+  width: 80%;
+  height: 80px;
+  margin: 1px auto; 
+  padding: 30px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center; /* מרכז את הטקסט */
+}
+
+.order-alert{
+  position: absolute;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 10px;
+  background: rgb(97, 95, 95);
+  color: white;
+  padding: 4px;
+  margin-top: 10px;
+  text-align: center;
+  border-radius: 2px;
+}
+
+
+.order-data{
+  margin-top: -1cap;
+  margin-left: 6%;
+}
+
+.order-item p{
+  margin-top: -1cap;
+}
+
+.button-container{
+  position: absolute;
+  display: flex;
+  margin-top: 2%;
+  margin-left: 70%;
+}
+
+.order-item button {
+  background-color: #bbd3d3; /* צבע רקע ברירת מחדל */
+  color: white; /* צבע טקסט */
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  cursor: pointer;
+  margin-left: 10px; /* רווח בין כפתורים */
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+
+.order-item button:hover {
+  background-color: #197d7f;
+  color: #ffeb3b; /* Change color on hover */
+}
+
+
+.delete-button {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  width: 100px;
+  height: 30px;
+}
+
+.plus-button {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+}
+
+
+
+
+/* Sign in - css */
+
+/* מיקום הקומפוננטה במרכז הדף */
+.sign-in-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f9f9f9; /* צבע רקע נעים לעין */
+}
+
+/* מגדיר קונטיינר מרכזי שמכיל גם את הכותרת וגם את תיבת ההתחברות */
+.sign-in-content {
+  text-align: center;
+}
+
+.sign-in-container h1{
+  font-size: 2em;
+  margin-bottom: 20px; /* מרווח בין הכותרת לתיבה */
+  color: #197d7f;
+}
+/* עיצוב תיבת ההתחברות */
+.sign-in-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* צל להבלטת התיבה */
+  width: 300px;
+}
+
+.sign-in-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05); /* צל פנימי */
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+}
+
+.sign-in-box input:focus {
+  border-color: #197d7f; /* צבע מסגרת בקלט פעיל */
+  outline: none; /* הסרת מסגרת ברירת מחדל */
+}
+
+.sign-in-box button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background-color: #197d7f; /* צבע רקע לכפתור */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sign-in-box button:hover {
+  background-color: #145e61; /* צבע רקע בריחוף */
+  color: #ffeb3b; /* שינוי צבע טקסט בריחוף */
+}
+
+.sign-in-box p {
+  margin-top: 15px;
+  color: #333;
+  font-size: 0.9em;
+}
+
+.custom-link {
+  color: black; /* צבע שחור ללינק */
+  text-decoration: none; /* הסרת קו תחתון */
+  transition: color 0.3s ease;
+  margin-top: -5px;
+}
+
+.custom-link:hover {
+  color: #145e61; /* צבע אחר בריחוף */
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+
+
+
+/* Courses - css */
+
+.surf-courses {
+  font-family: Arial, sans-serif;
+  line-height: 1.8;
+  color: #333;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: right; 
+  direction: rtl; 
+}
+
+.surf-courses h2 {
+  text-align: center;
+  color: #0073e6;
+  font-size: 30px;
+  margin-bottom: 60px;
+}
+
+.surf-courses h3 {
+  color: #005bb5;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.surf-courses p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.surf-courses strong {
+  color: #005bb5;
+}
+
+.surf-courses .cta {
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  color: #0073e6;
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
